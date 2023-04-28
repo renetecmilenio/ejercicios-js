@@ -5,8 +5,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
+
+  
+
+
+    <!-- 
+  En JavaScript, una variable es un contenedor que se utiliza para almacenar valores. 
+  Los valores pueden ser de cualquier tipo, incluyendo:
+  ****números, cadenas de texto, objetos, funciones y booleanos.***
+
+  https://desarrolloweb.com/storage/article_featured_images/MaQ6mbAWDZnfyZMSEcXOfeZtkVwnTdVUV4TZOZhO.png  
+
+    JavaScript es un lenguaje de ***TIPADO DINÁMICO***, lo que significa que no es necesario especificar el tipo de datos de una variable en el momento de la declaración. En su lugar, el tipo de datos de una variable se determina automáticamente en tiempo de ejecución. Esto significa que una misma variable puede almacenar diferentes tipos de datos a lo largo de su vida útil. 
+
+
+   Las variables en JavaScript son contenedores para almacenar valores. Permiten asignar un nombre a un valor y luego hacer referencia a ese valor a través de ese nombre. En el mundo real, piensa en una caja que tenga una etiqueta que indique lo que está dentro. De la misma manera, las variables en programación tienen un nombre que les da una identidad y pueden contener diferentes valores, dependiendo del tipo de datos que almacenen (Mdn web docs, 2023).
+
+  
+  Por ejemplo, puedes tener una variable llamada "edad" que almacene el valor de 25, o una variable llamada "nombre" que almacene la cadena de texto "Jhon". De esta manera, las variables te permiten almacenar y acceder a valores específicos en tus programas.
+
+  https://www.tutorialstonight.com/assets/js/2-variables-as-containers-with-values.webp
+
+   Variables y tipos de datos en JavaScript. En JavaScript existen los siguientes tipos de datos:
+  
+  - Number.
+  - String.
+  - Boolean.
+  - Null.
+  - Undefined.
+  - BigInt.
+  - Symbol.
+  - Object.
+  - Function.
+
+
+   En cuanto a variables, NO EXISTE UN LÍMITE específico en la cantidad de variables que se pueden crear en JavaScript, sino que está limitado por la memoria disponible en el dispositivo en el que se está ejecutando el código. Por lo tanto, puedes crear tantas variables como necesites en tu código, siempre y cuando la memoria del dispositivo lo permita.
+
+
+En JavaScript, existen dos tipos de datos: primitivos y compuestos. Los tipos de datos primitivos son aquellos que representan un valor único y simple, mientras que los tipos de datos compuestos son aquellos que se componen de varios valores primitivos o compuestos.
+
+Los tipos de datos ***PRIMITIVOS*** en JavaScript son:
+
+1. Números (Number): Representan números enteros o decimales.
+2. Cadenas de texto (String): Representan texto o caracteres.
+3. Booleanos (Boolean): Representan valores verdaderos o falsos (true o false).
+4. Null: Representa un valor nulo o vacío.
+5. Undefined: Representa una variable sin valor asignado.
+6. Símbolos (Symbol): Representan valores únicos e inmutables.
+
+Los tipos de datos ***COMPUESTOS*** en JavaScript son:
+
+1. Arrays [13, "nombre"]: Representan una lista ordenada de valores, que pueden ser primitivos o compuestos.
+2. Objetos (Object) {
+    edad: 30;
+    sexo: masuclino
+}: Representan una colección de propiedades, donde cada propiedad tiene un nombre y un valor, que pueden ser primitivos o compuestos.
+3. Funciones (Function) () { }: Representan un bloque de código que puede ser invocado y ejecutado.
+4. Clases {}: Es una plantilla o modelo que describe los atributos y comportamientos de un objeto.
+
+Es importante entender la diferencia entre los tipos de datos primitivos y compuestos, ya que esto afectará cómo se manejan y manipulan los datos en JavaScript. 
+  
+
+  En JavaScript, se puede definir una variable usando una de las tres palabras clave: 
+  
+  *****var, let o const.****
+
+ https://pbs.twimg.com/media/EeVw-DOXgAAMtKk.jpg
+
+*var* se usaba antes de la versión ES6 de JavaScript para declarar variables. Aunque aún se puede usar, es recomendable utilizar let o const.
+
+*let* se utiliza para declarar variables que pueden ser reasignadas más adelante en el código.
+
+*const* se utiliza para declarar variables que no pueden ser reasignadas más adelante en el código.
+
+
+  Los identificadores deben comenzar con:
+  
+  - Una letra 
+  - Un signo de dolar $ 
+  - Un guión bajo _
+  - Nunca con números o caracteres especiales.
+
+     -->
+
+     <div id="nombre-usuario" >
+
+     </div>
+     
+     <div class="caja">
+
+     </div>
+  
+
+   <script>
+    
+    var Nombre = "René"; // ya no se recomienda su uso
+    let $Apellido = "Ceron";
+    let correo = "rene.ceron@tecmilenio.mx";
+    const _Edad = 33;
+
+    // Puedes declarar todas las variables al mismo tiempo
+    var   apellido = "Treviño",
+      genero = "hombre";
+
+      console.log(Nombre , apellido , genero, $Apellido)
+
+      console.log(correo)
+
+
+      let esMayorDeEdad = true;
+
+      if (esMayorDeEdad) {
+        console.log("Eres mayor de edad y puedes entrar al bar");
+      } else {
+        console.log(
+          "Lo siento, tienes que ser mayor de edad para entrar al bar"
+        );
+      }
+
+
+      let nombre = "Juan";
+      
+//document.getElementById("nombre-usuario").innerHTML = nombre;
+//document.querySelector("#nombre-usuario").innerHTML = genero;
+
+
+let persona = {
+    nombre: "Juan",
+    edad: 25
+};
+
+
+let mensaje = "Hola " + persona.nombre + ", tienes " + persona.edad + " años.";
+
+document.querySelector("#nombre-usuario").innerHTML = mensaje;
+console.log(mensaje)
+
+   </script>
     
 </body>
 </html>
