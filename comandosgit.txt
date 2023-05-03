@@ -51,7 +51,7 @@
 
 
 # se agrega el origen remoto de tu repositorio de GitHub
-    git remote add origin https://github.com/usuario/repositorio.git
+    git remote add origin https:#github.com/usuario/repositorio.git
 # la primera vez que vinculamos el repositorio remoto con el local
     git push -u origin master
 # para las subsecuentes actualizaciones, sino cambias de rama
@@ -67,12 +67,12 @@
     git add .
     git commit -m "Primer commit"
     git branch -M main
-    git remote add origin https://github.com/usuario/repositorio.git
+    git remote add origin https:#github.com/usuario/repositorio.git
     git push -u origin main
 
 ++++ Para repositorios existentes ++++
     git branch -M main
-    git remote add origin https://github.com/usuario/repositorio.git
+    git remote add origin https:#github.com/usuario/repositorio.git
     git push -u origin main
 
 ***** AYUDA *****
@@ -98,7 +98,7 @@ doc/*.txt
 doc/**/*.txt
 
 ******** Clonar repositorios **********+
-    git clone https://github.com/usuario/repositorio.git
+    git clone https:#github.com/usuario/repositorio.git
 
 
 ******* Ramas*******
@@ -234,7 +234,7 @@ Podemos eliminar el historial de cambios del proyecto hacia adelante con respect
     git remote -v
 
 # agregar un orígen remoto
-    git remote add nombre-orígen https://github.com/usuario/repositorio.git
+    git remote add nombre-orígen https:#github.com/usuario/repositorio.git
 
 # renombrar un orígen remoto
     git remote rename nombre-viejo nombre-nuevo
@@ -271,6 +271,34 @@ Con esta opción git nos permite versionar nuestro código, librería o proyecto
     git add .
     git tag -a "v1.0.0" -m "Mensaje de la etiqueta"
     git push --tags
+
+**** Trucos*******
+# Muestra en una línea los commit realizados
+    git log --oneline
+# Muestra en una línea los commit realizados pero más elegante
+    git log --oneline --decorate --all --graph
+# Solo muestra los archivos modificados
+    git status -s
+
+****** Creando alias globales**********
+Los alias nos sirven para crear atajos de comandos, podemos guardar diferentes alias de forma global y quedarán guardados en la configuración de git.
+
+# Guardamos el alias "lg" que ejecutará todo lo que está entre comillas
+    git config --global alias.lg "log --oneline --decorate --all --graph"
+# Para ver el archivo config con los alias creados
+    git config --global -e
+
+********** Renombrar archivos***********
+Puede que queramos renombrar un archivo, es recomendable hacerlo directamente en la línea de comandos para registrar los cambios con git.
+
+# Cambiar nombre
+    git mv nombreOriginal.vue nombreNuevo.vue
+Recuerden hacer el commit para registrar los cambios en git.
+
+******** Eliminar archivos**********
+# Cambiar nombre
+    git rm nombreArchivo.vue
+También recordar hacer el commit para salgar cambios en gi
 
 
 
