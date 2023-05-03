@@ -8,20 +8,20 @@ git config --global init.defaultBranch main
 git config --list
 
 # asignando visual studio code como editor de configuración de git
-git config --global core.editor "code --wait"
-git config --global -e
+    git config --global core.editor "code --wait"
+    git config --global -e
 
 # para estandarizar los saltos de línea en windows
-git config --global core.autocrlf true
+    git config --global core.autocrlf true
 
 # para estandarizar los saltos de línea en linux/mac
-git config --global core.autocrlf input
+    git config --global core.autocrlf input
 
 # ver todas las opciones de la configuración en la terminal
-git config -h
+    git config -h
 
 # ver todas las opciones de la configuración en el navegador
-git help config
+    git help config
 
 ************ Inicializar Git en un directorio local **********
 mkdir carpeta
@@ -34,9 +34,9 @@ code .
 ********* Flujo básico **********
 
 # agregar los cambios de un archivo al staged
-git add archivo/directorio
+    git add archivo/directorio
 # agregar todos los cambios de todos los archivos al staged
-git add .
+    git add .
 
 
 # los cambios son comprometidos en el repositorio
@@ -44,22 +44,22 @@ git add .
 # cuando se abra el archivo de configuración
 # al terminar guarda y cierra el archivo
 # para que los cambios tengan efecto
-git commit
+    git commit
 # es un shortcut del comando anterior
 # escribes y confirmas el mensaje del cambio en un sólo paso
-git commit -m "mensaje descriptivo del cambio"
+    git commit -m "mensaje descriptivo del cambio"
 
 
 # se agrega el origen remoto de tu repositorio de GitHub
-git remote add origin https://github.com/usuario/repositorio.git
+    git remote add origin https://github.com/usuario/repositorio.git
 # la primera vez que vinculamos el repositorio remoto con el local
-git push -u origin master
+    git push -u origin master
 # para las subsecuentes actualizaciones, sino cambias de rama
-git push
+    git push
 
 
 #para descargar los cambios del repositorio remoto al local
-git pull
+    git pull
 
 ********** De master a main *******
 +++ Para repositorios nuevos +++
@@ -77,9 +77,9 @@ git pull
 
 ***** AYUDA *****
 # ayuda en la terminal
-git comando -h
+    git comando -h
 # ayuda en el navegador
-git help comando    
+    git help comando    
 
 *********** Ignorar archivos *************
 # esto es un comentario
@@ -98,27 +98,27 @@ doc/*.txt
 doc/**/*.txt
 
 ******** Clonar repositorios **********+
-git clone https://github.com/usuario/repositorio.git
+    git clone https://github.com/usuario/repositorio.git
 
 
 ******* Ramas*******
 # crear rama
-git branch nombre-rama
+    git branch nombre-rama
 
 # cambiar de rama
-git checkout nombre-rama
+    git checkout nombre-rama
 
 # crear una rama y cambiarte a ella
-git checkout -b rama
+    git checkout -b rama
 
 # eliminar rama
-git branch -d nombre-rama
+    git branch -d nombre-rama
 
 # eliminar ramas remotas
-git push origin --delete nombre-rama
+    git push origin --delete nombre-rama
 
 #eliminar rama (forzado)
-git branch -D nombre-rama
+    git branch -D nombre-rama
 
 # listar todas las ramas del repositorio
     git branch
@@ -143,134 +143,134 @@ Cuando se fusionan ramas se pueden dar 2 resultados diferentes:
 Fast-Forward: La fusión se hace automática, no hay conflictos por resolver.
 Manual Merge: La fusión hay que hacerla manual, para resolver conflictos de duplicación de contenido.
 
-    # nos cambiamos a la rama principal que quedará de la fusión
+# nos cambiamos a la rama principal que quedará de la fusión
     git checkout rama-principal
 
-    # ejecutamos el comando merge con la rama secundaria a fusionar
+# ejecutamos el comando merge con la rama secundaria a fusionar
     git merge rama-secundaria
 
 ********* Cambios***********
-    # sin editar el mensaje del último commit
+# sin editar el mensaje del último commit
     git commit --amend --no-edit
 
-    # editando el mensaje del último commit
+# editando el mensaje del último commit
     git commit --amend -m "nuevo mensaje para el último commit"
 
-    # eliminar el último commit
+# eliminar el último commit
     git reset --hard HEAD~1
 
 Podemos desplazarnos en el historial del repositorio hacia atrás o adelante en cambios o ramas , sin afectar el repositorio como tal.
 
-    # cambiar a una rama
+# cambiar a una rama
     git checkout nombre-rama
 
-    # cambiar a un commit en particular
+# cambiar a un commit en particular
     git checkout id-commit
 
 
 **********Registro del historial*********
 git log nos permite conocer todo el historial de un proyecto, con la información de la fecha, el autor y id de cada cambio.
 
-git log
+    git log
 
 # muestra en una sola línea por cambio
- git log --oneline
+    git log --oneline
 
 # guarda el log en la ruta y archivo que especifiquemos
- git log > commits.txt
+    git log > commits.txt
 
 # muestra el historial con el formato que indicamos
-git log --pretty=format:"%h - %an, %ar : %s"
+    git log --pretty=format:"%h - %an, %ar : %s"
 
 # cambiamos la n por cualquier número entero y mostrará los n cambios recientes
-git log -n
+    git log -n
 
 # muestra los cambios realizados después de la fecha especificada
-git log --after="2019-07-07 00:00:00"
+    git log --after="2019-07-07 00:00:00"
 
 # muestra los cambios realizados antes de la fecha especificada
-git log --before="2019-07-08 00:00:00"
+    git log --before="2019-07-08 00:00:00"
 
 # muestra los cambios realizados en el rango de fecha especificado
-git log --after="2019-07-07 00:00:00" --before="2019-07-08 00:00:00"
+    git log --after="2019-07-07 00:00:00" --before="2019-07-08 00:00:00"
 
 # muestra una gráfica del historial de cambios, rama y fusiones
-git log --oneline --graph --all
+    git log --oneline --graph --all
 
 # muestra todo el registro de acciones del log
 # incluyendo inserciones, cambios, eliminaciones, fusiones, etc.
-git reflog
+    git reflog
 
 # diferencias entre el Working Directory y el Staging Area
-git diff
+    git diff
 
 
 ***********Reseteo del historial***********
 Podemos eliminar el historial de cambios del proyecto hacia adelante con respecto de un punto de referencia.
 
 #nos muestra el listado de archivos nuevos (untracked), borrados o editados
-git status
+    git status
 
 # borra HEAD
-git reset --soft
+    git reset --soft
 
 # borra HEAD y Staging
-git reset --mixed
+    git reset --mixed
 
 # borra todo: HEAD, Staging y Working Directory
-git reset --hard
+    git reset --hard
 
 # deshace todos los cambios después del commit indicado, preservando los cambios localmente
-git reset id-commit
+    git reset id-commit
 
 # desecha todo el historial y regresa al commit especificado
-git reset --hard id-commit
+    git reset --hard id-commit
 
 **********Remotos*********
 # muestra los orígenes remotos del repositorio
-git remote
+    git remote
 
 # muestra los orígenes remotos con detalle
-git remote -v
+    git remote -v
 
 # agregar un orígen remoto
-git remote add nombre-orígen https://github.com/usuario/repositorio.git
+    git remote add nombre-orígen https://github.com/usuario/repositorio.git
 
 # renombrar un orígen remoto
-git remote rename nombre-viejo nombre-nuevo
+    git remote rename nombre-viejo nombre-nuevo
 
 # eliminar un orígen remoto
-git remote remove nombre-orígen
+    git remote remove nombre-orígen
 
 # descargar una rama remota a local diferente a la principal
-git checkout --track -b rama-remota origin/rama-remota
+    git checkout --track -b rama-remota origin/rama-remota
 
 
 **********Etiquetas************
 Con esta opción git nos permite versionar nuestro código, librería o proyecto.
 
 # listar etiquetas
-git tag
+    git tag
 
 # crea una etiqueta
-git tag numero-versión
+    git tag numero-versión
 
 # eliminar una etiqueta
-git tag -d numero-versión
+    git tag -d numero-versión
 
 # mostrar información de una etiqueta
-git show numero-versión
+    git show numero-versión
 
 # sincronizando la etiqueta del repositorio local al remoto
-git add .
-git  tag v1.0.0
-git commit -m "v1.0.0"
-git push origin numero-versión
+    git add .
+    git  tag v1.0.0
+    git commit -m "v1.0.0"
+    git push origin numero-versión
 
 # generando una etiqueta anotada (con mensaje de commit)
-git add .
-git tag -a "v1.0.0" -m "Mensaje de la etiqueta"
-git push --tags
+    git add .
+    git tag -a "v1.0.0" -m "Mensaje de la etiqueta"
+    git push --tags
 
 
 
