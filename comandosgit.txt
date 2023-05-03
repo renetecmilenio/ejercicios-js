@@ -1,8 +1,8 @@
 *********Configurando Git por primera vez*******
 
     git --version
-    git config --global user.name "Jonathan MirCha"
-    git config --global user.email jonmircha@gmail.com
+    git config --global user.name "Nombre"
+    git config --global user.email correo@gmail.com
     git config --global user.ui true
     git config --global init.defaultBranch main
     git config --list
