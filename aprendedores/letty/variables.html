@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="">
-</head>
 
+    
+</head>
 <body>
+
+  
 
 
     <!-- 
@@ -91,171 +93,60 @@ Es importante entender la diferencia entre los tipos de datos primitivos y compu
 
      -->
 
-    <div id="nombre-usuario">
+     <div id="nombre-usuario" >
 
-    </div>
+     </div>
+     
+     <div class="caja">
 
-    <div class="caja">
-
-    </div>
-
-
-    <script>
-
-        var Nombre = "René 82"; // ya no se recomienda su uso
-        let $Apellido = "Ceron";
-        let correo = "rene.ceron@tecmilenio.mx";
-        const _Edad = 33;
-
-        // Puedes declarar todas las variables al mismo tiempo
-        var apellido = "Treviño",
-            genero = "hombre";
-
-        console.log(Nombre, apellido, genero, $Apellido)
-
-        console.log(correo)
-
-
-        let esMayorDeEdad = true;
-
-        if (esMayorDeEdad) {
-            console.log("Eres mayor de edad y puedes entrar al bar");
-        } else {
-            console.log(
-                "Lo siento, tienes que ser mayor de edad para entrar al bar"
-            );
-        }
-
-
-        let nombre = "Juan";
-
-        //document.getElementById("nombre-usuario").innerHTML = nombre;
-        //document.querySelector("#nombre-usuario").innerHTML = genero;
-
-
-        let persona = {
-            nombre: "Juan",
-            edad: 25
-        };
-
-
-        let mensaje = "Hola " + persona.nombre + ", tienes " + persona.edad + " años.";
-
-        document.querySelector("#nombre-usuario").innerHTML = mensaje;
-        console.log(mensaje)
-
-
-
-        /*
-       Una función anónima se define utilizando la palabra clave function y no tiene un nombre explícito. Puedes asignarla a una variable y usar la variable para llamar a la función. Por ejemplo:
-       */
-        const suma = function (a, b) {
-            return a + b;
-        };
-
-        console.log(suma(2, 3)); // Imprime 5
-
-        let usuario = null;
-        console.log(usuario); // muestra "null"
-
-        let a;
-        console.log(a); // imprime "undefined"
-
-        let b = null;
-        console.log(b); // imprime "null"
-
-        var edad = 30;
-        var altura = 1.75;
-
-            /*
+     </div>
   
- 1) Usa snake_case en:
-Nombre de archivos:
 
-mi_archivo_javascript.js;
+   <script>
+    
+    var Nombre = "René"; // ya no se recomienda su uso
+    let $Apellido = "Ceron";
+    let correo = "rene.ceron@tecmilenio.mx";
+    const _Edad = 33;
 
-*/
+    // Puedes declarar todas las variables al mismo tiempo
+    var   apellido = "Treviño",
+      genero = "hombre";
 
+      console.log(Nombre , apellido , genero, $Apellido)
 
-    // 2)Usa UPPER_CASE en:
-
-    //Constantes:
-    const UNA_CONSTANTE = "Soy una constante",
-    PI = 3.141592653589793;
-
-
-  /* 3) Usa UpperCamelCase en: 
-   Clases: */
-  class SerHumano {
-    constructor(nombre, genero) {
-      this.nombre = nombre;
-      this.genero = genero;
-    }
-
-    miNombreEs() {
-      return `Mi nombre es ${this.nombre}`;
-    }
-  }
+      console.log(correo)
 
 
+      let esMayorDeEdad = true;
 
-  // 4) Usa lowerCamelCase en:
-
-  // Objetos: 
-  const unObjeto = {
-    nombre: "René",
-    email: "rene.ceron@gmail.com",
-  };
-
-
-  // Primitivos:
-  let unaCadena = "Hola Mundo",
-    unNumero = 19,
-    unBoolean = true;
+      if (esMayorDeEdad) {
+        console.log("Eres mayor de edad y puedes entrar al bar");
+      } else {
+        console.log(
+          "Lo siento, tienes que ser mayor de edad para entrar al bar"
+        );
+      }
 
 
-  // Funciones:
-  function holaMundo(nombre) {
-    alert(`Hola mundo ${nombre}`);
-  }
-  holaMundo("René Cerón");
+      let nombre = "Juan";
+      
+//document.getElementById("nombre-usuario").innerHTML = nombre;
+//document.querySelector("#nombre-usuario").innerHTML = genero;
 
 
-
-  //Instancias:
-  const ajax = new XMLHttpRequest(),
-    rene = new SerHumano("René", "Hombre");
-
-
-
-  /*PAÑABRAS RESERVADAS
-  
-  Las palabras reservadas son palabras que tienen un significado especial en un lenguaje de programación y no pueden ser utilizadas como identificadores (nombres de variables, funciones, etc.) en el código.
-  
-  A: abstract
-  B: boolean, break, byte
-  C: case, catch, char, class, const, continue
-  D: debugger, default, delete, do, double
-  E: else, enum, export, extends
-  F: false, final, finally, float, for, function
-  G: goto
-  I: if, implements, import, in, instanceof, int, interface
-  L: let, long
-  N: native, new, null
-  P: package, private, protected, public
-  R: return
-  S: short, static, super, switch, synchronized
-  T: this, throw, throws, transient, true, try, typeof
-  V: var, volatile, void
-  W: while, with  
-  
-  
-    */
+let persona = {
+    nombre: "Juan",
+    edad: 25
+};
 
 
+let mensaje = "Hola " + persona.nombre + ", tienes " + persona.edad + " años.";
 
-    </script>
+document.querySelector("#nombre-usuario").innerHTML = mensaje;
+console.log(mensaje)
 
+   </script>
+    
 </body>
-
 </html>
