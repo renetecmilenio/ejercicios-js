@@ -91,18 +91,18 @@ Es importante entender la diferencia entre los tipos de datos primitivos y compu
 
      -->
 
-     <div id="nombre-usuario" >
+    <div id="nombre-usuario" >
 
-     </div>
+    </div>
      
-     <div class="caja">
+    <div class="caja">
 
-     </div>
+    </div>
   
 
    <script>
     
-    var Nombre = "René"; // ya no se recomienda su uso
+    /*var Nombre = "René"; // ya no se recomienda su uso
     let $Apellido = "Ceron";
     let correo = "rene.ceron@tecmilenio.mx";
     const _Edad = 33;
@@ -134,7 +134,7 @@ Es importante entender la diferencia entre los tipos de datos primitivos y compu
 
 
 let persona = {
-    nombre: "Juan",
+    nombre: "Osmar",
     edad: 25
 };
 
@@ -142,7 +142,21 @@ let persona = {
 let mensaje = "Hola " + persona.nombre + ", tienes " + persona.edad + " años.";
 
 document.querySelector("#nombre-usuario").innerHTML = mensaje;
-console.log(mensaje)
+console.log(mensaje) */ 
+
+// Datos personales del usuario
+
+var nombre = "Eduardo";
+var edad = "25";
+var correo = "osmared@hotmail.com";
+
+let mensaje = "Hola " +  nombre + ", tienes " + edad + " años.";
+
+console.log(mensaje);
+document.querySelector("#nombre-usuario").innerHTML = mensaje;
+console.log(correo);
+
+//console.log(nombre , edad , correo);
 
    </script>
     

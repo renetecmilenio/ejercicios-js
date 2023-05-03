@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  </head>
+<body>
+
+  
+
+
+    <!-- 
+  En JavaScript, una variable es un contenedor que se utiliza para almacenar valores. 
+  Los valores pueden ser de cualquier tipo, incluyendo:
+  ****números, cadenas de texto, objetos, funciones y booleanos.***
+
+  https://desarrolloweb.com/storage/article_featured_images/MaQ6mbAWDZnfyZMSEcXOfeZtkVwnTdVUV4TZOZhO.png  
+
+    JavaScript es un lenguaje de ***TIPADO DINÁMICO***, lo que significa que no es necesario especificar el tipo de datos de una variable en el momento de la declaración. En su lugar, el tipo de datos de una variable se determina automáticamente en tiempo de ejecución. Esto significa que una misma variable puede almacenar diferentes tipos de datos a lo largo de su vida útil. 
+
+
+   Las variables en JavaScript son contenedores para almacenar valores. Permiten asignar un nombre a un valor y luego hacer referencia a ese valor a través de ese nombre. En el mundo real, piensa en una caja que tenga una etiqueta que indique lo que está dentro. De la misma manera, las variables en programación tienen un nombre que les da una identidad y pueden contener diferentes valores, dependiendo del tipo de datos que almacenen (Mdn web docs, 2023).
+
+  
+  Por ejemplo, puedes tener una variable llamada "edad" que almacene el valor de 25, o una variable llamada "nombre" que almacene la cadena de texto "Jhon". De esta manera, las variables te permiten almacenar y acceder a valores específicos en tus programas.
+
+  https://www.tutorialstonight.com/assets/js/2-variables-as-containers-with-values.webp
+
+   Variables y tipos de datos en JavaScript. En JavaScript existen los siguientes tipos de datos:
+  
+  - Number.
+  - String.
+  - Boolean.
+  - Null.
+  - Undefined.
+  - BigInt.
+  - Symbol.
+  - Object.
+  - Function.
+
+
+   En cuanto a variables, NO EXISTE UN LÍMITE específico en la cantidad de variables que se pueden crear en JavaScript, sino que está limitado por la memoria disponible en el dispositivo en el que se está ejecutando el código. Por lo tanto, puedes crear tantas variables como necesites en tu código, siempre y cuando la memoria del dispositivo lo permita.
+
+
+En JavaScript, existen dos tipos de datos: primitivos y compuestos. Los tipos de datos primitivos son aquellos que representan un valor único y simple, mientras que los tipos de datos compuestos son aquellos que se componen de varios valores primitivos o compuestos.
+
+Los tipos de datos ***PRIMITIVOS*** en JavaScript son:
+
+1. Números (Number): Representan números enteros o decimales.
+2. Cadenas de texto (String): Representan texto o caracteres.
+3. Booleanos (Boolean): Representan valores verdaderos o falsos (true o false).
+4. Null: Representa un valor nulo o vacío.
+5. Undefined: Representa una variable sin valor asignado.
+6. Símbolos (Symbol): Representan valores únicos e inmutables.
+
+Los tipos de datos ***COMPUESTOS*** en JavaScript son:
+
+1. Arrays [13, "nombre"]: Representan una lista ordenada de valores, que pueden ser primitivos o compuestos.
+2. Objetos (Object) {
+    edad: 30;
+    sexo: masuclino
+}: Representan una colección de propiedades, donde cada propiedad tiene un nombre y un valor, que pueden ser primitivos o compuestos.
+3. Funciones (Function) () { }: Representan un bloque de código que puede ser invocado y ejecutado.
+4. Clases {}: Es una plantilla o modelo que describe los atributos y comportamientos de un objeto.
+
+Es importante entender la diferencia entre los tipos de datos primitivos y compuestos, ya que esto afectará cómo se manejan y manipulan los datos en JavaScript. 
+  
+
+  En JavaScript, se puede definir una variable usando una de las tres palabras clave: 
+  
+  *****var, let o const.****
+
+ https://pbs.twimg.com/media/EeVw-DOXgAAMtKk.jpg
+
+*var* se usaba antes de la versión ES6 de JavaScript para declarar variables. Aunque aún se puede usar, es recomendable utilizar let o const.
+
+*let* se utiliza para declarar variables que pueden ser reasignadas más adelante en el código.
+
+*const* se utiliza para declarar variables que no pueden ser reasignadas más adelante en el código.
+
+
+  Los identificadores deben comenzar con:
+  
+  - Una letra 
+  - Un signo de dolar $ 
+  - Un guión bajo _
+  - Nunca con números o caracteres especiales.
+
+     -->
+
+     <div id="nombre-usuario" >
+
+     </div>
+     
+     <div class="caja">
+
+     </div>
+  
+     <div class="container">
+
+      <h1>Bootstrap grid examples</h1>
+      <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+
+      <h3>Five grid tiers</h3>
+      <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+
+      <div class="row">
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">.col-lg-4</div>
+        <div class="col-lg-4">.col-lg-4</div>
+        <div class="col-lg-4">.col-lg-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-4">.col-xl-4</div>
+        <div class="col-xl-4">.col-xl-4</div>
+        <div class="col-xl-4">.col-xl-4</div>
+      </div>
+
+      <h3>Three equal columns</h3>
+      <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <h3>Three unequal columns</h3>
+      <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+      <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-3">.col-md-3</div>
+      </div>
+
+      <h3>Two columns</h3>
+      <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+      <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <h3>Full width, single column</h3>
+      <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+      <hr>
+
+      <h3>Two columns with two nested columns</h3>
+      <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+      <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+      <div class="row">
+        <div class="col-md-8">
+          .col-md-8
+          <div class="row">
+            <div class="col-md-6">.col-md-6</div>
+            <div class="col-md-6">.col-md-6</div>
+          </div>
+        </div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <hr>
+
+      <h3>Mixed: mobile and desktop</h3>
+      <p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
+      <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+      <div class="row">
+        <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-6">.col-6</div>
+        <div class="col-6">.col-6</div>
+      </div>
+
+      <hr>
+
+      <h3>Mixed: mobile, tablet, and desktop</h3>
+      <p></p>s
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-8">.col-12 .col-sm-6 .col-lg-8</div>
+        <div class="col-6 col-lg-4">.col-6 .col-lg-4</div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      </div>
+
+    </div>s
+   <script>
+    
+const bigInt = 123456789012345678901234567890n;
+alert("bigInt es :"+bigInt)
+
+
+let esMayorDeEdad = true;
+
+if (esMayorDeEdad) {
+  console.log("Eres mayor de edad y puedes entrar al bar");
+  alert("Eres mayor de edad y puedes entrar al bar :"+esMayorDeEdad)
+} else {
+  console.log( "Lo siento, tienes que ser mayor de edad para entrar al bar");
+  alert("Lo siento, tienes que ser mayor de edad para entrar al bar :"+esMayorDeEdad)
+}
+
+
+const sum = function(a, b) {
+  return a + b;
+};
+
+
+ // devuelve 15
+
+alert("const sum = :"+sum(5, 10))
+
+let usuario = null;
+console.log(usuario); // muestra "null"
+alert("usuario = null:"+usuario)
+
+
+let a;
+console.log(a); // imprime "undefined"
+alert("undefined:"+a)
+let b = null;
+console.log(b); // imprime "null"
+alert("null b:"+b)
+var edad = 30;
+var altura = 1.75;
+
+
+let persona = {
+  nombre: "Jesus",
+  edad: 30,
+  ciudad: "Madrid"
+};
+console.log("persona: "+persona.nombre); 
+
+var nombre = "Juan";
+
+
+const miSimbolo = Symbol('Mi simbolo');
+
+console.log(typeof miSimbolo); // Output: symbol
+
+
+let num = 42;
+console.log(typeof num); // Output: "number"
+
+let str = "Hello World";
+console.log(typeof str); // Output: "string"
+
+let flag = true;
+console.log(typeof flag); // Output: "boolean"
+
+let nothing = null;
+console.log(typeof nothing); // Output: "object"(este es un error conocido en JavaScript)
+
+let sym = Symbol("My Symbol");
+console.log(typeof sym); // Output: "symbol"
+
+let undef;
+console.log(typeof undef); // Output: "undefined"
+
+
+let name;
+console.log(name); // Output: undefined
+
+/*segunda parte*/
+let suma = 2 + 3;
+console.log(sum); // Output: 5
+
+
+let diff = 5 - 2;
+console.log("let suma : "+diff); // Output: 3
+
+let product = 4 * 2;
+console.log("let product = 4 * 2 ="+product); // Output: 8
+
+let division = 8 / 4;
+console.log("let division = 8 / 4; "+division); // Output: 2
+
+let modulus = 7 % 3;
+console.log("let modulus = 7 % 3; "+modulus); // Output: 1
+
+
+
+   </script>
+
+
+</body>
+</html>
