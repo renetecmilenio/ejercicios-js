@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+
+    <!-- 
+  En JavaScript, una variable es un contenedor que se utiliza para almacenar valores. 
+  Los valores pueden ser de cualquier tipo, incluyendo:
+  ****números, cadenas de texto, objetos, funciones y booleanos.***
+
+  https://desarrolloweb.com/storage/article_featured_images/MaQ6mbAWDZnfyZMSEcXOfeZtkVwnTdVUV4TZOZhO.png  
+
+    JavaScript es un lenguaje de ***TIPADO DINÁMICO***, lo que significa que no es necesario especificar el tipo de datos de una variable en el momento de la declaración. En su lugar, el tipo de datos de una variable se determina automáticamente en tiempo de ejecución. Esto significa que una misma variable puede almacenar diferentes tipos de datos a lo largo de su vida útil. 
+
+
+   Las variables en JavaScript son contenedores para almacenar valores. Permiten asignar un nombre a un valor y luego hacer referencia a ese valor a través de ese nombre. En el mundo real, piensa en una caja que tenga una etiqueta que indique lo que está dentro. De la misma manera, las variables en programación tienen un nombre que les da una identidad y pueden contener diferentes valores, dependiendo del tipo de datos que almacenen (Mdn web docs, 2023).
+
+  
+  Por ejemplo, puedes tener una variable llamada "edad" que almacene el valor de 25, o una variable llamada "nombre" que almacene la cadena de texto "Jhon". De esta manera, las variables te permiten almacenar y acceder a valores específicos en tus programas.
+
+  https://www.tutorialstonight.com/assets/js/2-variables-as-containers-with-values.webp
+
+   Variables y tipos de datos en JavaScript. En JavaScript existen los siguientes tipos de datos:
+  
+  - Number.
+  - String.
+  - Boolean.
+  - Null.
+  - Undefined.
+  - BigInt.
+  - Symbol.
+  - Object.
+  - Function.
+
+
+   En cuanto a variables, NO EXISTE UN LÍMITE específico en la cantidad de variables que se pueden crear en JavaScript, sino que está limitado por la memoria disponible en el dispositivo en el que se está ejecutando el código. Por lo tanto, puedes crear tantas variables como necesites en tu código, siempre y cuando la memoria del dispositivo lo permita.
+
+
+En JavaScript, existen dos tipos de datos: primitivos y compuestos. Los tipos de datos primitivos son aquellos que representan un valor único y simple, mientras que los tipos de datos compuestos son aquellos que se componen de varios valores primitivos o compuestos.
+
+Los tipos de datos ***PRIMITIVOS*** en JavaScript son:
+
+1. Números (Number): Representan números enteros o decimales.
+2. Cadenas de texto (String): Representan texto o caracteres.
+3. Booleanos (Boolean): Representan valores verdaderos o falsos (true o false).
+4. Null: Representa un valor nulo o vacío.
+5. Undefined: Representa una variable sin valor asignado.
+6. Símbolos (Symbol): Representan valores únicos e inmutables.
+
+Los tipos de datos ***COMPUESTOS*** en JavaScript son:
+
+1. Arrays [13, "nombre"]: Representan una lista ordenada de valores, que pueden ser primitivos o compuestos.
+2. Objetos (Object) {
+    edad: 30;
+    sexo: masuclino
+}: Representan una colección de propiedades, donde cada propiedad tiene un nombre y un valor, que pueden ser primitivos o compuestos.
+3. Funciones (Function) () { }: Representan un bloque de código que puede ser invocado y ejecutado.
+4. Clases {}: Es una plantilla o modelo que describe los atributos y comportamientos de un objeto.
+
+Es importante entender la diferencia entre los tipos de datos primitivos y compuestos, ya que esto afectará cómo se manejan y manipulan los datos en JavaScript. 
+  
+
+  En JavaScript, se puede definir una variable usando una de las tres palabras clave: 
+  
+  *****var, let o const.****
+
+ https://pbs.twimg.com/media/EeVw-DOXgAAMtKk.jpg
+
+*var* se usaba antes de la versión ES6 de JavaScript para declarar variables. Aunque aún se puede usar, es recomendable utilizar let o const.
+
+*let* se utiliza para declarar variables que pueden ser reasignadas más adelante en el código.
+
+*const* se utiliza para declarar variables que no pueden ser reasignadas más adelante en el código.
+
+
+  Los identificadores deben comenzar con:
+  
+  - Una letra 
+  - Un signo de dolar $ 
+  - Un guión bajo _
+  - Nunca con números o caracteres especiales.
+
+     -->
+
+    <div id="nombre-usuario">
+
+    </div>
+
+    <div class="caja">
+
+    </div>
+
+
+    <script>
+
+        var Nombre = "René 82"; // ya no se recomienda su uso
+        let $Apellido = "Ceron";
+        let correo = "rene.ceron@tecmilenio.mx";
+        const _Edad = 33;
+
+        // Puedes declarar todas las variables al mismo tiempo
+        var apellido = "Treviño",
+            genero = "hombre";
+
+        console.log(Nombre, apellido, genero, $Apellido)
+
+        console.log(correo)
+
+
+        let esMayorDeEdad = true;
+
+        if (esMayorDeEdad) {
+            console.log("Eres mayor de edad y puedes entrar al bar");
+        } else {
+            console.log(
+                "Lo siento, tienes que ser mayor de edad para entrar al bar"
+            );
+        }
+
+
+      
+
+        //document.getElementById("nombre-usuario").innerHTML = nombre;
+        //document.querySelector("#nombre-usuario").innerHTML = genero;
+
+
+        let persona = {
+            nombre: "Juan",
+            edad: 25
+        };
+
+
+        let mensaje = "Hola " + persona.nombre + ", tienes " + persona.edad + " años.";
+
+        document.querySelector("#nombre-usuario").innerHTML = mensaje;
+        console.log(mensaje)
+
+
+
+        /*
+       Una función anónima se define utilizando la palabra clave function y no tiene un nombre explícito. Puedes asignarla a una variable y usar la variable para llamar a la función. Por ejemplo:
+       */
+        const suma = function (a, b) {
+            return a + b;
+        };
+
+        console.log(suma(2, 3)); // Imprime 5
+
+        let usuario = null;
+        console.log(usuario); // muestra "null"
+
+        let a;
+        console.log(a); // imprime "undefined"
+
+        let b = null;
+        console.log(b); // imprime "null"
+
+        var edad = 30;
+        var altura = 1.75;
+
+            /*
+  
+ 1) Usa snake_case en:
+Nombre de archivos:
+
+mi_archivo_javascript.js;
+
+*/
+
+
+    // 2)Usa UPPER_CASE en:
+
+    //Constantes:
+    const UNA_CONSTANTE = "Soy una constante",
+    PI = 3.141592653589793;
+
+
+  /* 3) Usa UpperCamelCase en: 
+   Clases: */
+  class SerHumano {
+    constructor(nombre, genero) {
+      this.nombre = nombre;
+      this.genero = genero;
+    }
+
+    miNombreEs() {
+      return `Mi nombre es ${this.nombre}`;
+    }
+  }
+
+
+
+  // 4) Usa lowerCamelCase en:
+
+  // Objetos: 
+  const people = {
+    nombre: "René",
+    email: "rene.ceron@gmail.com",
+  };
+
+  let mi_arreglo = ["instagram", 34, "snapchat", null]
+
+  console.log(mi_arreglo , people)
+
+
+  // Primitivos:
+  let unaCadena = "Hola Mundo",
+    unNumero = 19,
+    unBoolean = true;
+
+
+  // Funciones:
+  function holaMundo(nombre) {
+    alert(`Hola mundo ${nombre}`);
+  }
+  holaMundo("René Cerón");
+
+
+
+  //Instancias:
+  const ajax = new XMLHttpRequest(),
+    rene = new SerHumano("René", "Hombre");
+
+
+
+  /*PAÑABRAS RESERVADAS
+  
+  Las palabras reservadas son palabras que tienen un significado especial en un lenguaje de programación y no pueden ser utilizadas como identificadores (nombres de variables, funciones, etc.) en el código.
+  
+  A: abstract
+  B: boolean, break, byte
+  C: case, catch, char, class, const, continue
+  D: debugger, default, delete, do, double
+  E: else, enum, export, extends
+  F: false, final, finally, float, for, function
+  G: goto
+  I: if, implements, import, in, instanceof, int, interface
+  L: let, long
+  N: native, new, null
+  P: package, private, protected, public
+  R: return
+  S: short, static, super, switch, synchronized
+  T: this, throw, throws, transient, true, try, typeof
+  V: var, volatile, void
+  W: while, with  
+  
+  
+    */
+
+
+      /* **********      Variables: var VS let -     ********** */
+
+    /* var hola = "Hola Mundo";
+    let hello = "Hello World";
+    console.log(hola);
+    console.log(hello);
+    console.log(window);
+    console.log(window.hola);
+    console.log(window.hello); */
+    //Ambito de bloque
+    //Esto es un bloque - comentario de una lines
+    /*
+    Esto
+    es
+    un
+    comentario
+    de
+    varias
+    líneas */
+
+
+
+    
+    /* console.log ("**************** VAR *****************");
+
+    var musica = "Rock";
+    console.log("Variable Música antes del Bloque", musica);
+    {
+      var musica = "Pop";
+      console.log("Variable Música dentro del Bloque", musica);
+    }
+    console.log("Variable Música después del Bloque", musica);
+
+    console.log("****************let*****************");
+    
+    let musica2 = "Rock";
+    console.log("Variable Música antes del Bloque", musica2);
+    {
+      let musica2 = "Pop";
+      console.log("Variable Música dentro del Bloque", musica2);
+    }
+    console.log("Variable Música después del Bloque", musica2); */
+
+
+
+
+
+    /* **********      Constantes (const) -     ********** */
+
+    /*  let a;
+     const PI = 3.1416;
+     //const NUEVE;
+     console.log(PI);
+     //PI = 3.15;
+
+     a = "kenai";
+     console.log(a);
+
+     const objeto = {
+       nombre: "rene",
+       edad: 35
+     }
+
+     const colores = ["blanco", "negro", "azul"];
+
+     console.log(objeto);
+     console.log(colores);
+
+     objeto.correo = "reneceron@gmail.com";
+     colores.push("anaranjado");
+
+     console.log(objeto);
+     console.log(colores); */
+
+
+
+
+
+    /* **********     Cadenas de Texto (Strings) -     ********** */
+
+    /*
+        //Cadenas de Texto aka Strings
+        let nombre = "rene";
+        let apellido = 'ceron';
+        let saludo = new String("Hola Mundo");
+        let lorem = "       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, et dolorum. Adipisci sequi, voluptates accusamus earum magnam non pariatur odit consequuntur dicta modi. Quam soluta aliquid nam ea quod dolore.      ";
+
+        console.log(nombre, apellido, saludo);
+        console.log(
+          nombre.length,
+          apellido.length,
+          saludo.length,
+          nombre.toUpperCase(),
+          apellido.toLowerCase(),
+          lorem.includes("amet"),
+          lorem.includes("rene"),
+          lorem,
+          lorem.trim(),
+          lorem.split(" "),
+          lorem.split(",")
+        );
+
+     */
+
+
+
+
+
+    /* **********     Template Strings -     ********** */
+
+  let nombre = "rene";
+  let apellido = "ceron";
+
+  //Concatenación
+  //let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
+  //console.log(saludo);
+
+  //Interpolción de variables
+  //Template String
+  /* let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+  console.log(saludo2);
+
+  let ul = "<ul>< li > Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul > ";
+
+  console.log(ul);
+
+  let ul2 = `
+    <ul>
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+  </ul>
+  `;
+
+  console.log(ul2);
+
+  let ul3 = "<ul>";
+  ul3 += "<li> Primavera</li>";
+  ul3 += "<li>Verano</li>";
+  ul3 += "<li>Otoño</li>";
+  ul3 += "<li>Invierno</li>";
+  ul3 += "</ul>";
+
+  console.log(ul3);
+*/
+
+
+
+
+
+  /* **********      Números (Numbers) -     ********** */
+
+  /* let a = 2;
+  let b = new Number(1);
+  let c = 7.19;
+  let d = "5.6";
+
+  console.log(a, b);
+  console.log(c.toFixed(1));
+  console.log(c.toFixed(5));
+  console.log(parseInt(c));
+  console.log(parseFloat(c));
+  console.log(typeof c, typeof d);
+  console.log(a + b);
+  console.log(c + parseInt(d));
+  console.log(c + parseFloat(d));
+  console.log(c + Number.parseInt(d));
+  console.log(c + Number.parseFloat(d)); */
+
+
+
+
+
+  /* **********      Booleans -     ********** */
+
+  /*
+   let verdadero = true;
+  let falso = false;
+  let v = Boolean(true);
+  let f = Boolean(false);
+
+  console.log(verdadero, falso, v, f);
+  console.log(typeof verdadero, typeof falso);
+  console.log(Boolean(0));
+  console.log(Boolean(-7));
+  console.log(Boolean(""));
+  console.log(Boolean(" "));
+  
+  */
+
+
+  /* **********      undefined, null & NaN -     ********** */
+
+  //undefined indica que no se ha inicializado una variable y que el valor está ausente
+  /* let indefinida;
+  console.log(indefinida); */
+
+  //null es un valor especial que indica la ausencia de un valor
+  /* let nulo = null;
+  console.log(null); */
+
+  //NaN - Not a Number
+  /* let noEsUnNumero = "hola" * 3.7;
+  console.log(noEsUnNumero); */
+
+
+
+    </script>
+
+</body>
+
+</html>
