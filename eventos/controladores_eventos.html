@@ -1,0 +1,96 @@
+<!-- https://developer.mozilla.org/es/docs/Web/Events -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de eventos en JavaScript</title>
+</head>
+
+<body>
+
+  <!-- este es un elemento botón con el id="boton" -->
+  <button id="boton">Haz clic aquí</button>
+
+
+  <!-- este es un formulario se establece con la etiqueta form con un id="formulario" -->
+  <form id="formulario">
+
+    <!-- etqiueta del campo Nombre se liga con el atributo for="nombre" -->
+    <label for="nombre">Nombre:</label>
+    <!-- campo de tipo texto con identificador id="nombre" -->
+    <input type="text" id="nombre">
+
+    <!-- etqiueta del campo Nombre se liga con el atributo for="nombre" -->
+    <label for="correo">Correo electrónico:</label>
+    <!-- campo de tipo texto con identificador id="nombre" -->
+    <input type="email" id="correo">
+
+    <!-- este es un boton dentro de un formulario se establece con el tributo type="submit" -->
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- un elemento o etqiueta div con identificador id="elemento" -->
+  <div id="elemento">Pasa el cursor por encima</div>
+
+  <script>
+    // **************  EVENTO "ONCLICK" CUANDO DAS CLICK EN UN BOTÓN ******************
+
+    // esta variable guarda el elemento del DOM con el identificador id="boton"
+    let boton = document.getElementById("boton");
+
+    // establece un evento de tipo click al elemento guardado en la variable boton y manda una alerta al hacer el clic
+    boton.onclick = function () {
+      alert("¡Has hecho clic en el botón!");
+    };
+
+    // *************** EVENTO "ONSUBMIT" CUANDO DAS CLICK EN UN BOTÓN QUE ENVÍA LOS DATOS DE UN FORMULARIO *********************
+
+
+    // se establece una variable con nombre formulario que guarda el elemnto del DOM que tiene el identificador id="formulario"
+    let formulario = document.getElementById("formulario");
+
+    // a la variable formulario que guarda el elemento con identificador id ="formulario" se le establece un evento de tipo onsubmit 
+    formulario.onsubmit = function (event) {
+       // prevenimos el comportamiento por defecto del formulario, etableciendo un paramentro event
+      event.preventDefault();
+
+      // se establacen las variables para almacenar los valores que ingresen en los elementos de campo nombre y correo 
+      let nombre = document.getElementById("nombre").value;
+      let correo = document.getElementById("correo").value;
+
+      // se imprime en la consola el valor que se ingrese en los inputs de nombre y correo electrónico
+      console.log("Nombre: " + nombre);
+      console.log("Correo electrónico: " + correo);
+    };
+
+    //**************** EVENTO "ONMOUSEOVER" AL PASARA EL MPUSE ENCIMA DE UN ELEMENTO ********************
+
+    // estableces la variable guardando un elemento con identificador id="elemento"
+    let elemento = document.getElementById("elemento");
+
+    //se establece el evento onmouseover que imprime en consola el mensaje cuando pasas el mouse encima del elemento
+    elemento.onmouseover = function () {
+      console.log("El cursor ha entrado en el elemento.");
+    };
+
+    //************* EVENTO "ONKEYDOWN" CUANDO PRESIONAS UNA TECLA PARECIDO AL CLIC ******************
+    
+    // este evento ONKEYDOWN cuelga del objeto document (representa el html cargado) no necesita establecerse la variable pero si sepuede si se require 
+    // lo que hace el evento es que si se presiona alguna tecla ejecuta alguna tarea o instrucción, en este caso imprime en consola la tecla que se presiono así como las propiedades del evento 
+    document.onkeydown = function (event) {
+      console.log("Se ha presionado la tecla " + event.key + ".");
+      console.log(event);
+    };
+
+    //************ EVENTO ONLOAD  ****************
+
+    // este evento cuelga del objeto window (representa la ventana del navegador)
+    // se establece el evento ONLOAD que ejecuta alguna tarea al cargar el documento
+    window.onload = function () {
+      console.log("La página se ha cargado completamente.");
+    };
+  </script>
+</body>
+
+</html>
