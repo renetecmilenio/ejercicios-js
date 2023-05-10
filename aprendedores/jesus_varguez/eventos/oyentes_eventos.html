@@ -1,0 +1,194 @@
+<!-- https://developer.mozilla.org/es/docs/Web/Events -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de eventos en JavaScript con event listeners</title>
+</head>
+
+<body>
+  <button id="boton">Haz clic aquí</button>
+
+  <form id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre">
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo">
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="elemento">Pasa el cursor por encima</div>
+
+  <!-- Click  -->
+  <button id="myButton">Haz clic aquí</button>
+
+  <!-- Mouseover: -->
+  <div id="myDiv1">Pasa el mouse sobre mí</div>
+
+  <!-- Mouseout -->
+  <div id="myDiv2">Pasa el mouse sobre mí</div>
+
+  <!-- Change -->
+  <input type="text" id="myInput1">
+
+  <!-- submit -->
+  <form id="myForm">
+    <input type="text" name="username">
+    <input type="submit" value="Enviar">
+  </form>
+
+  <!-- load -->
+  <img src="https://picsum.photos/200/300" id="myImage1">
+
+  <!-- Error -->
+  <img src="https://picsum.photos/200/300" id="myImage2">
+
+  <!-- Resize -->
+  <div id="myDivResize"></div>
+
+  <!-- scroll -->
+  <div id="myDiv" style="height: 200vh"></div>
+
+
+  <!-- keydown -->
+  <input type="text" id="myInput2">
+
+  <!-- Keyup -->
+  <input type="text" id="myInput3">
+
+  <script>
+    let boton = document.getElementById("boton");
+
+    boton.addEventListener("click", function () {
+      alert("¡Has hecho clic en el botón!");
+    });
+
+    //*******************************
+
+    let formulario = document.getElementById("formulario");
+
+    formulario.addEventListener("submit", function (event) {
+      event.preventDefault(); // prevenimos el comportamiento por defecto del formulario
+
+      let nombre = document.getElementById("nombre").value;
+      let correo = document.getElementById("correo").value;
+
+      console.log("Nombre: " + nombre);
+      console.log("Correo electrónico: " + correo);
+    });
+
+
+    //******************** evento MOUSOVER
+
+
+    let elemento = document.getElementById("elemento");
+
+    elemento.addEventListener("mouseover", function () {
+      console.log("El cursor ha entrado en el elemento.");
+    });
+
+    // ************* evento KEYDOWN cuelga del objeto document
+
+    document.addEventListener("keydown", function (event) {
+      console.log("Se ha presionado la tecla " + event.key + ".");
+    });
+
+    // ************* Evento LOAD cuelga del objeto window
+
+    window.addEventListener("load", function () {
+      console.log("La página se ha cargado completamente.");
+    });
+
+    //*****************
+
+    //Click 
+    const button = document.getElementById('myButton');
+    button.addEventListener('click', () => {
+      console.log('Se ha hecho clic en el botón');
+    });
+
+
+    // Mouseover:
+    const div1 = document.getElementById('myDiv1');
+    div1.addEventListener('mouseover', () => {
+      console.log('El cursor del mouse está sobre el div');
+    });
+
+
+    // Mouseout
+    const div2 = document.getElementById('myDiv2');
+    div2.addEventListener('mouseout', () => {
+      console.log('El cursor del mouse ha salido del div');
+    });
+
+    // Change
+    const input1 = document.getElementById('myInput1');
+    input1.addEventListener('change', () => {
+      console.log(`El valor del input ha cambiado a ${input1.value}`);
+    });
+
+
+    // submit
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      console.log('El formulario ha sido enviado');
+    });
+
+
+    // load
+    const image1 = document.getElementById('myImage1');
+    image1.addEventListener('load', () => {
+      console.log('La imagen se ha cargado completamente');
+    });
+
+
+    //Error
+    const image2 = document.getElementById('myImage2');
+    image2.addEventListener('error', () => {
+      console.log('Ha ocurrido un error al cargar la imagen');
+    });
+
+    // Resize
+    // const div = document.getElementById('myDivResize');
+    window.addEventListener('resize', () => {
+      console.log(`El tamaño de la ventana es ${window.innerWidth}x${window.innerHeight}`);
+    });
+
+    //Scroll
+    //   const div = document.getElementById('myDiv');
+    window.addEventListener('scroll', () => {
+      console.log(`El contenido se ha desplazado ${window.scrollY} píxeles desde arriba`);
+    });
+
+
+
+    //keydown
+    const input2 = document.getElementById('myInput2');
+    input2.addEventListener('keydown', (event) => {
+      console.log(`Se ha presionado la tecla ${event.key}`);
+    });
+
+
+
+    //Keyup
+    const input3 = document.getElementById('myInput3');
+    input3.addEventListener('keyup', (event) => {
+      console.log(`Se ha soltado la tecla ${event.key}`);
+    });
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
