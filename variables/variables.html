@@ -12,8 +12,6 @@
 <body>
 
 
-
-
     <!-- 
   En JavaScript, una variable es un contenedor que se utiliza para almacenar valores. 
   Los valores pueden ser de cualquier tipo, incluyendo:
@@ -104,7 +102,7 @@ Es importante entender la diferencia entre los tipos de datos primitivos y compu
 
     <script>
 
-        var Nombre = "René"; // ya no se recomienda su uso
+        var Nombre = "René 82"; // ya no se recomienda su uso
         let $Apellido = "Ceron";
         let correo = "rene.ceron@tecmilenio.mx";
         const _Edad = 33;
@@ -129,7 +127,7 @@ Es importante entender la diferencia entre los tipos de datos primitivos y compu
         }
 
 
-        let nombre = "Juan";
+      
 
         //document.getElementById("nombre-usuario").innerHTML = nombre;
         //document.querySelector("#nombre-usuario").innerHTML = genero;
@@ -204,10 +202,14 @@ mi_archivo_javascript.js;
   // 4) Usa lowerCamelCase en:
 
   // Objetos: 
-  const unObjeto = {
+  const people = {
     nombre: "René",
     email: "rene.ceron@gmail.com",
   };
+
+  let mi_arreglo = ["instagram", 34, "snapchat", null]
+
+  console.log(mi_arreglo , people)
 
 
   // Primitivos:
@@ -253,6 +255,213 @@ mi_archivo_javascript.js;
   
   
     */
+
+
+      /* **********      Variables: var VS let -     ********** */
+
+    /* var hola = "Hola Mundo";
+    let hello = "Hello World";
+    console.log(hola);
+    console.log(hello);
+    console.log(window);
+    console.log(window.hola);
+    console.log(window.hello); */
+    //Ambito de bloque
+    //Esto es un bloque - comentario de una lines
+    /*
+    Esto
+    es
+    un
+    comentario
+    de
+    varias
+    líneas */
+
+
+
+    
+    /* console.log ("**************** VAR *****************");
+
+    var musica = "Rock";
+    console.log("Variable Música antes del Bloque", musica);
+    {
+      var musica = "Pop";
+      console.log("Variable Música dentro del Bloque", musica);
+    }
+    console.log("Variable Música después del Bloque", musica);
+
+    console.log("****************let*****************");
+    
+    let musica2 = "Rock";
+    console.log("Variable Música antes del Bloque", musica2);
+    {
+      let musica2 = "Pop";
+      console.log("Variable Música dentro del Bloque", musica2);
+    }
+    console.log("Variable Música después del Bloque", musica2); */
+
+
+
+
+
+    /* **********      Constantes (const) -     ********** */
+
+    /*  let a;
+     const PI = 3.1416;
+     //const NUEVE;
+     console.log(PI);
+     //PI = 3.15;
+
+     a = "kenai";
+     console.log(a);
+
+     const objeto = {
+       nombre: "rene",
+       edad: 35
+     }
+
+     const colores = ["blanco", "negro", "azul"];
+
+     console.log(objeto);
+     console.log(colores);
+
+     objeto.correo = "reneceron@gmail.com";
+     colores.push("anaranjado");
+
+     console.log(objeto);
+     console.log(colores); */
+
+
+
+
+
+    /* **********     Cadenas de Texto (Strings) -     ********** */
+
+    /*
+        //Cadenas de Texto aka Strings
+        let nombre = "rene";
+        let apellido = 'ceron';
+        let saludo = new String("Hola Mundo");
+        let lorem = "       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, et dolorum. Adipisci sequi, voluptates accusamus earum magnam non pariatur odit consequuntur dicta modi. Quam soluta aliquid nam ea quod dolore.      ";
+
+        console.log(nombre, apellido, saludo);
+        console.log(
+          nombre.length,
+          apellido.length,
+          saludo.length,
+          nombre.toUpperCase(),
+          apellido.toLowerCase(),
+          lorem.includes("amet"),
+          lorem.includes("rene"),
+          lorem,
+          lorem.trim(),
+          lorem.split(" "),
+          lorem.split(",")
+        );
+
+     */
+
+
+
+
+
+    /* **********     Template Strings -     ********** */
+
+  let nombre = "rene";
+  let apellido = "ceron";
+
+  //Concatenación
+  //let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
+  //console.log(saludo);
+
+  //Interpolción de variables
+  //Template String
+  /* let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+  console.log(saludo2);
+
+  let ul = "<ul>< li > Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul > ";
+
+  console.log(ul);
+
+  let ul2 = `
+    <ul>
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+  </ul>
+  `;
+
+  console.log(ul2);
+
+  let ul3 = "<ul>";
+  ul3 += "<li> Primavera</li>";
+  ul3 += "<li>Verano</li>";
+  ul3 += "<li>Otoño</li>";
+  ul3 += "<li>Invierno</li>";
+  ul3 += "</ul>";
+
+  console.log(ul3);
+*/
+
+
+
+
+
+  /* **********      Números (Numbers) -     ********** */
+
+  /* let a = 2;
+  let b = new Number(1);
+  let c = 7.19;
+  let d = "5.6";
+
+  console.log(a, b);
+  console.log(c.toFixed(1));
+  console.log(c.toFixed(5));
+  console.log(parseInt(c));
+  console.log(parseFloat(c));
+  console.log(typeof c, typeof d);
+  console.log(a + b);
+  console.log(c + parseInt(d));
+  console.log(c + parseFloat(d));
+  console.log(c + Number.parseInt(d));
+  console.log(c + Number.parseFloat(d)); */
+
+
+
+
+
+  /* **********      Booleans -     ********** */
+
+  /*
+   let verdadero = true;
+  let falso = false;
+  let v = Boolean(true);
+  let f = Boolean(false);
+
+  console.log(verdadero, falso, v, f);
+  console.log(typeof verdadero, typeof falso);
+  console.log(Boolean(0));
+  console.log(Boolean(-7));
+  console.log(Boolean(""));
+  console.log(Boolean(" "));
+  
+  */
+
+
+  /* **********      undefined, null & NaN -     ********** */
+
+  //undefined indica que no se ha inicializado una variable y que el valor está ausente
+  /* let indefinida;
+  console.log(indefinida); */
+
+  //null es un valor especial que indica la ausencia de un valor
+  /* let nulo = null;
+  console.log(null); */
+
+  //NaN - Not a Number
+  /* let noEsUnNumero = "hola" * 3.7;
+  console.log(noEsUnNumero); */
 
 
 
