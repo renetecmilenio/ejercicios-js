@@ -300,5 +300,6 @@ Recuerden hacer el commit para registrar los cambios en git.
     git rm nombreArchivo.vue
 También recordar hacer el commit para salgar cambios en gi
 
+git config --global init.defaultBranch main
 
 
